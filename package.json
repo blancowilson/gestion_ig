@@ -1,0 +1,30 @@
+{
+  "name": "gestion_ig",
+  "version": "0.1.0",
+  "description": "app to control and track spents and pays",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blancowilson/gestion_ig.git"
+  },
+  "keywords": [
+    "gestion",
+    "gastos",
+    "ingresos"
+  ],
+  "author": "Wilson Blanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blancowilson/gestion_ig/issues"
+  },
+  "homepage": "https://github.com/blancowilson/gestion_ig#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
