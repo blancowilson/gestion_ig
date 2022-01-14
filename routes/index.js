@@ -4,6 +4,7 @@ const controllerig = require('../controllers/igcontroller');
 
 module.exports = function (){
     router.get('/',controllerig.indexig);
-    router.get('/nosotros',controllerig.nosotros);
+    router.get('/nuevo-registro',controllerig.formularioNuevoRegistro);
+    router.post('/nuevo-registro',controllerig.nuevoRegistro);
     return router;
 }

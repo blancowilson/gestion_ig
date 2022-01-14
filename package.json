@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/blancowilson/gestion_ig#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.13.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
