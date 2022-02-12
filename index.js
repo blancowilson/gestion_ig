@@ -14,6 +14,14 @@ const productos = [
         'precio': 1500
     }
 ]
+//BD
+
+const db = require('./config/db');
+require('./models/Registros');
+db.sync()
+    .then(() => console.log('Conectando al servidor'))
+    .catch(error => console.log(error));
+
 //crear una app de express
 const app = express();
 

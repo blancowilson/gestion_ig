@@ -5,7 +5,6 @@ block contenido
         if errores
             each error in errores
                 .alerta= error.texto
-                
         form.agregar-proyecto(action="/nuevo-registro" method="POST")
             .campo
                 label(for="nombre") Registro

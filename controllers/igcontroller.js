@@ -1,3 +1,5 @@
+ const Registro = require('../models/registros')
+
 exports.indexig = (req, res) => {
     res.render('index', {
         nombrePagina: 'Inicio'
@@ -10,17 +12,23 @@ exports.formularioNuevoRegistro = (req, res) => {
     });
 }
 
-exports.nuevoRegistro = (req, res) => {
+exports.nuevoRegistro = async (req, res) => {
    const {nombre} = req.body;
    let errores = [];
    if (!nombre) {
-       errores.push({'texto': 'Agregar descripcion del registro'})
+        console.log(nombre);
+       errores.push({'texto': 'Agregar descripcion del registro'});
    }
    if (errores.length>0) {
     res.render('nuevo-registro', {
         nombrePagina: 'Nuevo Registro',
         errores
     })
+   }
+   else {
+       //console.log('no hay errores');
+       const reg = await Registro.create( { nombre })
+        res.redirect('/nuevo-registro');
    } 
 
 }
